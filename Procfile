@@ -1,1 +1,1 @@
-web: gunicorn playground.wsgi --log-file -
+web: gunicorn profilepage.wsgi --log-file -
