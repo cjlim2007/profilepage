@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = patterns('', 
 url(r'^$', 'profilepage.views.home', name='home'),
 url(r'^info/$', 'profilepage.views.info', name='info'), 
-url(r'^profile/$', 'profilepage.views.profile', name='profile') 
+url(r'^profile/$', 'profilepage.views.profile', name='profile'),
+url(r'^test/$', 'profilepage.views.test', name ='test')
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

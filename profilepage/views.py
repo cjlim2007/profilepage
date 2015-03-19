@@ -11,3 +11,6 @@ def info(request):
 
 def profile(request):
     return render(request, "profile.html")
+
+def test(request):
+	return render(request, "test.html")
