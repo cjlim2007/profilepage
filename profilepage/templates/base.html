@@ -10,12 +10,22 @@
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
+
     {% block pills %}
-<ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="/info/">Info</a></li>
-  <li role="presentation"><a href="/profile/">Resume</a></li>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav nav-tabs">
+  <li role="presentation" {% block info %}class="active"{% endblock %}><a href="/info/">Info</a></li>
+  <li role="presentation" {% block profile %}class="active"{% endblock %}><a href="/profile/">Profile</a></li>
   <li role="presentation"><a href="https://github.com/cjlim2007">GitHub</a></li>
 </ul>
+  </div>
+</nav>
+
+</body>
     {% endblock %}
     {% block content %}{% endblock %}
 </html>
